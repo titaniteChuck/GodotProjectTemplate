@@ -24,7 +24,7 @@ RunConfigManager="*res://addons/run-configs/run-config-manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/run-configs/plugin.cfg")
+enabled=PackedStringArray("res://addons/run-configs/plugin.cfg", "res://addons/run_preset/plugin.cfg")
 
 [rendering]
 
