@@ -18,7 +18,20 @@ config/name="Template"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+RunConfigManager="*res://addons/run-configs/run-config-manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/run-configs/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+[run_configs]
+
+data/configs=["{\"custom_scene\":\"\",\"environment_variables\":{},\"name\":\"Test\",\"play_mode\":0}"]
+data/current=0
