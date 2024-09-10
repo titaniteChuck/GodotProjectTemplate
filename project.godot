@@ -33,5 +33,5 @@ renderer/rendering_method.mobile="gl_compatibility"
 
 [run_configs]
 
-data/configs=["{\"custom_scene\":\"\",\"environment_variables\":{},\"name\":\"Test\",\"play_mode\":0}"]
+data/configs=["{\"custom_scene\":\"\",\"environment_variables\":{\"TEST\":\"value\"},\"name\":\"Test\",\"play_mode\":0}"]
 data/current=0

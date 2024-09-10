@@ -1,3 +1,6 @@
 [submodule ".\\addons_submodules/godot-run-configs"]
 	path = .\\addons_submodules/godot-run-configs
 	url = git@github.com:poohcom1/godot-run-configs.git
+[submodule "addons_submodules/godot-run-preset"]
+	path = addons_submodules/godot-run-preset
+	url = git@github.com:rylydou/godot-run-preset.git
