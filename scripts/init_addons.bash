@@ -8,7 +8,6 @@ GIT_SUBMODULE_FOLDER=$PROJECT_ROOT/addons_submodules
 GODOT_ADDONS_FOLDER=$PROJECT_ROOT/addons
 GITIGNORE=$PROJECT_ROOT/.gitignore
 
-
 add_submodule() {
     repo_url=$1
     submodule_name=$(basename $repo_url)
@@ -26,7 +25,7 @@ add_submodule() {
     if test -L "$addon_folder_in_godot_addons_dir"; then
         echo "SoftLink [$addon_folder_in_godot_addons_dir] already exists in folder [$GODOT_ADDONS_FOLDER]"
     else
-        ln -s $addon_folder_in_submodule_dir $addon_folder_in_godot_addons_dir
+        ln -s $pwd/$addon_folder_in_submodule_dir $addon_folder_in_godot_addons_dir
     fi
 
     addon_gitignore_entry=addons/$(basename $addon_folder_in_submodule_dir)
@@ -37,6 +36,9 @@ add_submodule() {
         echo $addon_gitignore_entry >> $GITIGNORE
     fi
 }
+
+git submodule init
+git submodule update
 
 add_submodule git@github.com:poohcom1/godot-run-configs.git
 add_submodule git@github.com:rylydou/godot-run-preset.git
