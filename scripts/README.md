@@ -30,6 +30,9 @@ The script `scripts/sync_addons.bash` does the following actions:
     - Create the symbolic link `addons/<symlink>` -> `addons_submodules/...` for godot to detect the addon
     - Add an entry to .gitignore for only this addon, so if you have some of your own, they won't be ignored 
 
+> ### **/!\ Important to note**:
+> This script also supports multiple plugins being present in the same repository. It will link them all seemlessly in godot addons folder 
+
 ## How to use
 
 ### Prerequisites
@@ -37,7 +40,7 @@ The script `scripts/sync_addons.bash` does the following actions:
 - Windows: I have tested this script using Git bash
 - HOWEVER, you MUST have enabled the "enable symlink" option. See [this issue](https://github.com/orgs/community/discussions/23591#discussioncomment-3241019)
 
-> [!CAUTION]
+> ### **/!\ Important to note**:
 > WSL WILL NOT WORK because of symlinks. See [this article](https://blog.trailofbits.com/2024/02/12/why-windows-cant-follow-wsl-symlinks/)
 
 ### Run the tool
