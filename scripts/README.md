@@ -41,7 +41,7 @@ The script `scripts/sync_addons.bash` does the following actions:
 - HOWEVER, you MUST have enabled the "enable symlink" option. See [this issue](https://github.com/orgs/community/discussions/23591#discussioncomment-3241019)
 
 > ### **/!\ Important to note**:
-> WSL WILL NOT WORK because of symlinks. See [this article](https://blog.trailofbits.com/2024/02/12/why-windows-cant-follow-wsl-symlinks/)
+> running the script with WSL WILL NOT WORK as expected because symlinks created by wsl are not recognized by windows. See [this article](https://blog.trailofbits.com/2024/02/12/why-windows-cant-follow-wsl-symlinks/)
 
 ### Run the tool
 1. Edit the `scripts/sync_addons.bash` file, and list your plugins in the `ADDONS_LIST` list.
