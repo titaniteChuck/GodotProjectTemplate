@@ -17,7 +17,7 @@ func _init() -> void:
 	_timer.timeout.connect(_monitor_load_status)
 	add_child(_timer)
 
-func load_async(scenePath: String):
+func load_async(scenePath: String) -> void:
 	if _is_loading:
 		printerr("SceneLoader is Already loading "+_scenePath+". Use await SceneLoader.load_complete")
 		return

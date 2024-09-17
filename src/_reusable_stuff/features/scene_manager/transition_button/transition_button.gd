@@ -7,8 +7,7 @@ class_name TransitionButton extends Button
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pressed.connect(_on_button_pressed)
-	pressed.connect(_on_button_pressed)
-	pass # Replace with function body.
+	pass
 
 
 func _on_button_pressed():
@@ -20,3 +19,6 @@ func _on_button_pressed():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _init_new_scene(node: Node) -> void:
+	node.get_node("Label").text = "ext value"

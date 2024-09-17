@@ -21,7 +21,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneLoader="*res://src/_reusable_stuff/features/scene_loader/scene_loader.tscn"
 SceneManager="*res://src/_reusable_stuff/features/scene_manager/scene_manager.tscn"
 
 [display]

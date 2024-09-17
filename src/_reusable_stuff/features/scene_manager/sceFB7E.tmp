@@ -12,3 +12,4 @@ script = ExtResource("3_jatpt")
 
 [node name="Transition_Manager" type="Node" parent="."]
 script = ExtResource("2_thgyn")
+default_root_path = null

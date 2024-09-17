@@ -155,11 +155,11 @@ init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
 load_into_position = -1
-transition = 2
+transition = 1
 transiton_duration = 0.3
 transition_tween_type = 1
 fade_color = Color(0, 0, 0, 1)
-slide_direction = Vector2i(0, 0)
+slide_direction = Vector2i(1, 0)
 anim_player_transition_name = ""
 
 [sub_resource type="Resource" id="Resource_6xwvn"]
@@ -175,11 +175,11 @@ init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
 load_into_position = -1
-transition = 2
+transition = 1
 transiton_duration = 0.3
 transition_tween_type = 1
 fade_color = Color(0, 0, 0, 1)
-slide_direction = Vector2i(0, 0)
+slide_direction = Vector2i(1, 0)
 anim_player_transition_name = ""
 next_transition = SubResource("Resource_y1f2k")
 
@@ -252,6 +252,7 @@ size_flags_horizontal = 0
 text = "Other Main Scene"
 script = ExtResource("2_in5qu")
 transition = SubResource("Resource_6xwvn")
+transitions = Array[ExtResource("3_r8gk2")]([SubResource("Resource_6xwvn"), SubResource("Resource_y1f2k")])
 
 [node name="Menu_Button3" type="Button" parent="."]
 offset_left = 631.0
@@ -262,3 +263,9 @@ size_flags_horizontal = 0
 text = "Toggle background"
 script = ExtResource("2_in5qu")
 transition = SubResource("Resource_nqhfb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 639.0
+offset_top = 245.0
+offset_right = 774.0
+offset_bottom = 285.0

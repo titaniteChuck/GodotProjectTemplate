@@ -1,7 +1,7 @@
 @tool
 class_name SceneManager_TransitionData extends Resource
 
-@export var type: Scene_Manager.OPERATION_TYPE = Scene_Manager.OPERATION_TYPE.LOAD:
+@export var type: Transition_Manager.OPERATION_TYPE = Transition_Manager.OPERATION_TYPE.LOAD:
 	set(value):
 		type = value
 		notify_property_list_changed()
@@ -34,7 +34,7 @@ class_name SceneManager_TransitionData extends Resource
 @export var load_into_position:int = -1
 
 @export_subgroup("Transition to use")
-@export var transition: Scene_Manager.TRANSITION_TYPE = Scene_Manager.TRANSITION_TYPE.NONE:
+@export var transition: Transition_Manager.TRANSITION_TYPE = Transition_Manager.TRANSITION_TYPE.NONE:
 	set(value):
 		transition = value
 		notify_property_list_changed()
@@ -66,11 +66,11 @@ func _validate_property(property: Dictionary):
 
 	property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	if type == Scene_Manager.OPERATION_TYPE.LOAD:
+	if type == Transition_Manager.OPERATION_TYPE.LOAD:
 		if property.name in ["What to load", "scene_to_load"]:
 			property.usage = old_usage
 
-	elif type == Scene_Manager.OPERATION_TYPE.UNLOAD:
+	elif type == Transition_Manager.OPERATION_TYPE.UNLOAD:
 		if property.name in ["What to unload", "node_to_unload"]:
 			property.usage = old_usage
 
@@ -81,20 +81,20 @@ func _validate_property(property: Dictionary):
 			property.usage = PROPERTY_USAGE_NO_EDITOR
 
 	if scene_path_to_load:
-		if property.name in ["load_into_path", "load_into_position"]:
+		if property.name in ["load_into_path", "load_into_position", "init_method"]:
 			property.usage = old_usage
 
 	if node_to_unload or scene_path_to_load:
 		if property.name in ["Transition to use", "transition"]:
 			property.usage = old_usage
 
-		if transition == Scene_Manager.TRANSITION_TYPE.SLIDE:
+		if transition == Transition_Manager.TRANSITION_TYPE.SLIDE:
 			if property.name in ["transiton_duration", "transition_tween_type", "slide_direction"]:
 				property.usage = old_usage
-		if transition == Scene_Manager.TRANSITION_TYPE.FADE:
+		if transition == Transition_Manager.TRANSITION_TYPE.FADE:
 			if property.name in ["transiton_duration", "transition_tween_type", "fade_color"]:
 				property.usage = old_usage
-		if transition == Scene_Manager.TRANSITION_TYPE.CUSTOM:
+		if transition == Transition_Manager.TRANSITION_TYPE.CUSTOM:
 			if property.name in ["loading_screen", "anim_player_transition_name"]:
 				property.usage = old_usage
 
