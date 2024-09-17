@@ -15,16 +15,23 @@ show_on_startup=false
 [application]
 
 config/name="Template"
+run/main_scene="res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-RunConfigManager="*res://addons/run-configs/run-config-manager.gd"
+SceneLoader="*res://src/_reusable_stuff/features/scene_loader/scene_loader.tscn"
+SceneManager="*res://src/_reusable_stuff/features/scene_manager/scene_manager.tscn"
+
+[display]
+
+window/size/always_on_top=true
+window/handheld/orientation=6
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/run-configs/plugin.cfg", "res://addons/run_preset/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 

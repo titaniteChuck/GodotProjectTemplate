@@ -1,0 +1,138 @@
+[gd_scene load_steps=14 format=3 uid="uid://d2op88tnijexd"]
+
+[ext_resource type="PackedScene" uid="uid://dgu5k80hgu14d" path="res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn" id="1_h3uss"]
+[ext_resource type="Texture2D" uid="uid://6y1g3a1lagdl" path="res://src/this_game/_game_scenes/_shared/main_scene/resources/hero1_sprite.png" id="1_kdug8"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="2_6usn5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0oqq"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lh0o"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(64, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r14l1"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(128, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8fi"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(192, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wmn2"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(256, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58gw6"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(320, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtb7k"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(384, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yxs0"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(448, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n63h6"]
+atlas = ExtResource("1_kdug8")
+region = Rect2(512, 640, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xd1op"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0oqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lh0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r14l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de8fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wmn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58gw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtb7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yxs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n63h6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node"]
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasModulate" type="CanvasModulate" parent="ColorRect2"]
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainScene" type="Node2D" parent="CanvasLayer"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/MainScene"]
+position = Vector2(553, 317)
+sprite_frames = SubResource("SpriteFrames_xd1op")
+
+[node name="Menu_Button" type="Button" parent="CanvasLayer/MainScene"]
+offset_left = 632.0
+offset_top = 299.0
+offset_right = 790.0
+offset_bottom = 351.0
+size_flags_horizontal = 0
+text = "Back to main menu"
+script = ExtResource("2_6usn5")
+
+[node name="Menu_Button2" type="Button" parent="CanvasLayer/MainScene"]
+offset_left = 632.0
+offset_top = 363.0
+offset_right = 790.0
+offset_bottom = 415.0
+size_flags_horizontal = 0
+text = "Other Main Scene"
+script = ExtResource("2_6usn5")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="CanvasLayer/MainScene"]
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/MainScene/CanvasLayer2"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="CanvasLayer" parent="CanvasLayer/MainScene/CanvasLayer2" instance=ExtResource("1_h3uss")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/MainScene/CanvasLayer2"]

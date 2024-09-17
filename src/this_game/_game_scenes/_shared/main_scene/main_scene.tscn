@@ -1,0 +1,200 @@
+[gd_scene load_steps=18 format=3 uid="uid://c403gw0gehyv3"]
+
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="1_7b1wy"]
+[ext_resource type="Texture2D" uid="uid://6y1g3a1lagdl" path="res://src/this_game/_game_scenes/_shared/main_scene/resources/hero1_sprite.png" id="1_7uqaw"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="2_mt5h4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0oqq"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lh0o"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(64, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r14l1"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(128, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8fi"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(192, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wmn2"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(256, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58gw6"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(320, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtb7k"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(384, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yxs0"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(448, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n63h6"]
+atlas = ExtResource("1_7uqaw")
+region = Rect2(512, 640, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xd1op"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0oqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lh0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r14l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de8fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wmn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58gw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtb7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yxs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n63h6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_vt1xk"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn::Resource_vt1xk"
+resource_scene_unique_id = "Resource_vt1xk"
+script = ExtResource("2_mt5h4")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_20onr"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn::Resource_20onr"
+resource_scene_unique_id = "Resource_20onr"
+script = ExtResource("2_mt5h4")
+type = 1
+node_to_unload = NodePath("..")
+"What to load" = null
+scene_path_to_load = ""
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("../../CanvasLayer2/ColorRect/MainScene/Menu_Button/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_vt1xk")
+
+[sub_resource type="Resource" id="Resource_smd4b"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn::Resource_smd4b"
+resource_scene_unique_id = "Resource_smd4b"
+script = ExtResource("2_mt5h4")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "res://src/this_game/_game_scenes/_shared/main_scene/other_main_scene.tscn"
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_glt0q"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn::Resource_glt0q"
+resource_scene_unique_id = "Resource_glt0q"
+script = ExtResource("2_mt5h4")
+type = 1
+node_to_unload = NodePath("..")
+"What to load" = null
+scene_path_to_load = ""
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("../../CanvasLayer2/ColorRect/MainScene/Menu_Button2/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_smd4b")
+
+[node name="MainScene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(553, 317)
+sprite_frames = SubResource("SpriteFrames_xd1op")
+
+[node name="Menu_Button" type="Button" parent="."]
+offset_left = 632.0
+offset_top = 299.0
+offset_right = 790.0
+offset_bottom = 351.0
+size_flags_horizontal = 0
+text = "Back to main menu"
+script = ExtResource("1_7b1wy")
+transition = SubResource("Resource_20onr")
+
+[node name="Menu_Button2" type="Button" parent="."]
+offset_left = 632.0
+offset_top = 363.0
+offset_right = 790.0
+offset_bottom = 415.0
+size_flags_horizontal = 0
+text = "Other Main Scene"
+script = ExtResource("1_7b1wy")
+transition = SubResource("Resource_glt0q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.448398, 0.436024, 1.92523e-07, 1)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ban31snx5h0ac"]
+
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager.gd" id="1_2bai4"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_2bai4")
+default_root_path = "/root/MainScene/Panels_and_tabs/ScrollablePanelLoader"

@@ -36,9 +36,9 @@ The script `scripts/sync_addons.bash` does the following actions:
 ## How to use
 
 ### Prerequisites
-- Be able to do a `git clone` from the command line
-- Windows: I have tested this script using Git bash
-- HOWEVER, you MUST have enabled the "enable symlink" option. See [this issue](https://github.com/orgs/community/discussions/23591#discussioncomment-3241019)
+- Be able to do a `git clone` from the command line, this script does not handle authentication
+- Windows: I have succesfully tested this script using [Git bash](https://gitforwindows.org/)
+    - HOWEVER, you MUST have enabled the "enable symlink" option. See [this issue](https://github.com/orgs/community/discussions/23591#discussioncomment-3241019)
 
 > ### **/!\ Important to note**:
 > running the script with WSL WILL NOT WORK as expected because symlinks created by wsl are not recognized by windows. See [this article](https://blog.trailofbits.com/2024/02/12/why-windows-cant-follow-wsl-symlinks/)

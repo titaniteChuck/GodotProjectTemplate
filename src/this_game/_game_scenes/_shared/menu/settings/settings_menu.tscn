@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://cngwod5p88kup"]
+
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="1_7nbu6"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="2_wq6tl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rirm4"]
+bg_color = Color(0.0641055, 0.0862204, 0.230004, 1)
+
+[sub_resource type="Resource" id="Resource_oysog"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/menu/settings/settings_menu.tscn::Resource_oysog"
+resource_scene_unique_id = "Resource_oysog"
+script = ExtResource("2_wq6tl")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 1.0
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_a51y8"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/_shared/menu/settings/settings_menu.tscn::Resource_a51y8"
+resource_scene_unique_id = "Resource_a51y8"
+script = ExtResource("2_wq6tl")
+type = 1
+node_to_unload = NodePath("../../../..")
+"What to load" = null
+scene_path_to_load = ""
+init_method = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 1.0
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_oysog")
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rirm4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Spacer_Left" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MainMunu_Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "< Back to Main Menu"
+script = ExtResource("1_7nbu6")
+transition = SubResource("Resource_a51y8")
+
+[node name="MenuTitle_Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="settings_GridContainer" type="GridContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/h_separation = 20
+columns = 2
+
+[node name="Volume_Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Volume_Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_HSlider2" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Volume_Label3" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_HSlider3" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Volume_Label4" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_HSlider4" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Volume_Label5" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_HSlider5" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer/settings_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Spacer_Right" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
