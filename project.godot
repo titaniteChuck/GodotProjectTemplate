@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneManager="*res://src/_reusable_stuff/features/scene_manager/scene_manager.tscn"
+SaveSystem="*res://src/_reusable_stuff/features/save_system/save_system.tscn"
 
 [display]
 
@@ -30,7 +31,7 @@ window/handheld/orientation=6
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/resource_path/plugin.cfg")
 
 [rendering]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cngwod5p88kup"]
 
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="1_7nbu6"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="2_wq6tl"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_manager/scene_manager_transition_data.gd" id="2_wq6tl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rirm4"]
 bg_color = Color(0.0641055, 0.0862204, 0.230004, 1)
@@ -14,7 +14,7 @@ script = ExtResource("2_wq6tl")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
+scene_path_to_load = "uid://dgu5k80hgu14d"
 init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dcfdsci8fc3ym" path="res://src/this_game/_game_scenes/_shared/other_main_scene/scene_2_background.tscn" id="1_6t434"]
 [ext_resource type="Texture2D" uid="uid://6y1g3a1lagdl" path="res://src/this_game/_game_scenes/_shared/main_scene/resources/hero1_sprite.png" id="1_yw0i5"]
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="2_in5qu"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="3_r8gk2"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_manager/scene_manager_transition_data.gd" id="3_r8gk2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0oqq"]
 atlas = ExtResource("1_yw0i5")
@@ -89,7 +89,7 @@ script = ExtResource("3_r8gk2")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
+scene_path_to_load = "uid://dgu5k80hgu14d"
 init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
@@ -150,7 +150,7 @@ script = ExtResource("3_r8gk2")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn"
+scene_path_to_load = "uid://c403gw0gehyv3"
 init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
@@ -241,7 +241,7 @@ size_flags_horizontal = 0
 text = "Back to main menu"
 script = ExtResource("2_in5qu")
 transition = SubResource("Resource_qhnih")
-transitions = Array[ExtResource("3_r8gk2")]([SubResource("Resource_0io8k"), SubResource("Resource_qhnih")])
+transitions = Array[ExtResource("3_r8gk2")]([SubResource("Resource_0io8k"), SubResource("Resource_4hl2x")])
 
 [node name="Menu_Button2" type="Button" parent="."]
 offset_left = 632.0

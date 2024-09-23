@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgu5k80hgu14d"]
+[gd_scene load_steps=12 format=3 uid="uid://dgu5k80hgu14d"]
 
 [ext_resource type="Texture2D" uid="uid://yhc53811s4j5" path="res://src/this_game/_game_scenes/_shared/menu/resources/main_menu_banner.bmp" id="1_h0e2b"]
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="2_bm3to"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="3_x3gmf"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_manager/scene_manager_transition_data.gd" id="3_x3gmf"]
+[ext_resource type="Script" path="res://src/this_game/_game_scenes/_shared/menu/new_script.gd" id="4_eqabj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj847"]
 
@@ -14,7 +15,7 @@ script = ExtResource("3_x3gmf")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/main_scene/main_scene.tscn"
+scene_path_to_load = "uid://c403gw0gehyv3"
 init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
@@ -55,10 +56,10 @@ script = ExtResource("3_x3gmf")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/settings/settings_menu.tscn"
+scene_path_to_load = "uid://cngwod5p88kup"
 init_method = ""
 "Where to load" = null
-load_into_path = NodePath("../../../../../../CanvasLayer/PanelContainer/HBoxContainer/VBoxContainer/Settings_Button/root")
+load_into_path = NodePath("/root")
 load_into_position = -1
 transition = 2
 transiton_duration = 0.3
@@ -189,6 +190,7 @@ transitions = Array[ExtResource("3_x3gmf")]([SubResource("Resource_877eo"), SubR
 layout_mode = 2
 size_flags_vertical = 3
 text = "Credits"
+script = ExtResource("4_eqabj")
 
 [node name="Exit_Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2

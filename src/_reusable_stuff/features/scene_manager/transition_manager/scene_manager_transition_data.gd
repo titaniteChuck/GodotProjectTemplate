@@ -13,12 +13,7 @@ class_name SceneManager_TransitionData extends Resource
 		notify_property_list_changed()
 
 @export_group("What to load")
-@export var scene_to_load:PackedScene = null:
-	set(value):
-		scene_to_load = null
-		scene_path_to_load = value.resource_path if value else ""
-
-@export var scene_path_to_load: String = "":
+@export_file("PackedScene") var scene_path_to_load: String = "":
 	set(value):
 		scene_path_to_load = value
 		notify_property_list_changed()
@@ -67,7 +62,7 @@ func _validate_property(property: Dictionary):
 	property.usage = PROPERTY_USAGE_NO_EDITOR
 
 	if type == Transition_Manager.OPERATION_TYPE.LOAD:
-		if property.name in ["What to load", "scene_to_load"]:
+		if property.name in ["What to load", "scene_path_to_load"]:
 			property.usage = old_usage
 
 	elif type == Transition_Manager.OPERATION_TYPE.UNLOAD:
@@ -77,8 +72,6 @@ func _validate_property(property: Dictionary):
 	if scene_path_to_load:
 		if property.name in ["scene_path_to_load"]:
 			property.usage = old_usage
-		if property.name in ["scene_to_load"]:
-			property.usage = PROPERTY_USAGE_NO_EDITOR
 
 	if scene_path_to_load:
 		if property.name in ["load_into_path", "load_into_position", "init_method"]:

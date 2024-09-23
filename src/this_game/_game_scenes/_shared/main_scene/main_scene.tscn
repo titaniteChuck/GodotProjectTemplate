@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_button/transition_button.gd" id="1_7b1wy"]
 [ext_resource type="Texture2D" uid="uid://6y1g3a1lagdl" path="res://src/this_game/_game_scenes/_shared/main_scene/resources/hero1_sprite.png" id="1_7uqaw"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/scene_manager_transition_data.gd" id="2_mt5h4"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/scene_manager/transition_manager/scene_manager_transition_data.gd" id="2_mt5h4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0oqq"]
 atlas = ExtResource("1_7uqaw")
@@ -88,7 +88,7 @@ script = ExtResource("2_mt5h4")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/menu/main_menu.tscn"
+scene_path_to_load = "uid://dgu5k80hgu14d"
 init_method = ""
 "Where to load" = null
 load_into_path = NodePath("/root")
@@ -129,7 +129,7 @@ script = ExtResource("2_mt5h4")
 type = 0
 "What to unload" = null
 node_to_unload = NodePath("")
-scene_path_to_load = "res://src/this_game/_game_scenes/_shared/main_scene/other_main_scene.tscn"
+scene_path_to_load = "uid://bfnuyiw6qpk4u"
 init_method = "_init_new_scene"
 "Where to load" = null
 load_into_path = NodePath("/root")
