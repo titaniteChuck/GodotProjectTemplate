@@ -1,18 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://byhei44e0ixdu"]
+[gd_scene load_steps=7 format=3 uid="uid://byhei44e0ixdu"]
 
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/parent_saver.gd" id="1_8o0o0"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/save_resource_button.gd" id="5_gi0uu"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/load_resource_button.gd" id="6_dm7ld"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/counter_label.gd" id="6_tf40f"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/counter_model.gd" id="7_jnbig"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/nodes/save_system_save_button.gd" id="5_gi0uu"]
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/nodes/save_system_load_button.gd" id="6_dm7ld"]
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/change_resource_value_button.gd" id="8_vdg7h"]
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/multiple_resource_holder.gd" id="10_wx218"]
 [ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/examples/resource_saving/element_generator.gd" id="11_jusx0"]
-[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/children_saver.gd" id="12_dbob8"]
-
-[sub_resource type="Resource" id="Resource_qspyv"]
-script = ExtResource("7_jnbig")
-value = 10
+[ext_resource type="Script" path="res://src/_reusable_stuff/features/save_system/nodes/save_system_children_saver.gd" id="12_dbob8"]
 
 [node name="SaveExample" type="Node2D"]
 
@@ -33,22 +26,7 @@ offset_bottom = 58.0
 text = "Save"
 script = ExtResource("5_gi0uu")
 
-[node name="CounterLabel" type="Label" parent="resource_save"]
-layout_mode = 0
-offset_left = 201.0
-offset_top = 99.0
-offset_right = 241.5
-offset_bottom = 122.0
-text = "0"
-horizontal_alignment = 1
-script = ExtResource("6_tf40f")
-counter = SubResource("Resource_qspyv")
-
-[node name="PropertySaver" type="Node" parent="resource_save/CounterLabel"]
-script = ExtResource("1_8o0o0")
-properties_to_save = Array[String](["text"])
-
-[node name="ChangeLabelButton" type="Button" parent="resource_save" node_paths=PackedStringArray("label")]
+[node name="ChangeLabelButton" type="Button" parent="resource_save"]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 98.0
@@ -56,10 +34,9 @@ offset_right = 187.0
 offset_bottom = 129.0
 text = "-"
 script = ExtResource("8_vdg7h")
-label = NodePath("../CounterLabel")
 type = 1
 
-[node name="ChangeLabelButton2" type="Button" parent="resource_save" node_paths=PackedStringArray("label")]
+[node name="ChangeLabelButton2" type="Button" parent="resource_save"]
 layout_mode = 0
 offset_left = 257.0
 offset_top = 95.0
@@ -67,7 +44,6 @@ offset_right = 302.0
 offset_bottom = 126.0
 text = "+"
 script = ExtResource("8_vdg7h")
-label = NodePath("../CounterLabel")
 
 [node name="LoadButton" type="Button" parent="resource_save"]
 layout_mode = 0

@@ -1,4 +1,4 @@
-class_name SaveResourceButton extends Button
+class_name SaveSystem_SaveButton extends Button
 
 
 # Called when the node enters the scene tree for the first time.

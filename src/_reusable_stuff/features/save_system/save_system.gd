@@ -3,14 +3,15 @@ class_name Save_System extends Node
 signal save_requested
 signal load_requested
 
-@export var encryption_key : String = "abcdefg1234567"
-@export var use_encryption : bool = false
+@export var encryption_key := "abcdefg1234567"
+@export var use_encryption := false
 
-var base_folder = "user://saves"
+var base_folder := "user://saves"
 var default_file_path : String:
 	get: return "%s/save_file.tres" % [base_folder]
-var save_object: Save_File = Save_File.new()
+var save_object := SaveSystem_SaveFile.new()
 
+#region ##################### Public Save/Load Methods ############################
 func save_entity(id: String, what: Variant):
 	save_object.dictionary[id] = what
 
@@ -31,10 +32,12 @@ func load_savefile(file_path : String = default_file_path):
 	if use_encryption:
 		_decrypt_file(file_path)
 	save_object = ResourceLoader.load(file_path, "", ResourceLoader.CACHE_MODE_REPLACE_DEEP)
-	load_requested.emit()
 	if use_encryption:
 		DirAccess.remove_absolute(file_path)
-
+	load_requested.emit()
+#endregion
+		
+#region ##################### Encryption utils ############################
 func _encrypt_file(filepath: String):
 	var encrypted_filepath = _get_encrypted_file_name(filepath)
 	var cleartext_file : FileAccess = FileAccess.open(filepath, FileAccess.READ)
@@ -62,6 +65,7 @@ func _get_encrypted_file_name(cleartext_filepath: String) -> String:
 	# TODO: also encrypt save name
 	var encrypted_filepath = prefix + filename_without_extension + ".crypt" + extension
 	return encrypted_filepath
+#endregion
 
 # Ref: https://forum.godotengine.org/t/how-to-load-and-save-things-with-godot-a-complete-tutorial-about-serialization/44515
 #region ##################### Save / load INI ############################
