@@ -32,7 +32,7 @@ func _read_model():
 	_update_ui()
 	
 func _update_ui():
-	if not is_node_ready(): await ready
+	if not is_inside_tree(): await draw
 	var label_list = [label, label_2, label_3, label_4]
 	for i in range(0, values.size()):
 		label_list[i].text = str(values[i].value)

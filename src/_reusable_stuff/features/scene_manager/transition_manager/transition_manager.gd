@@ -42,7 +42,7 @@ func _should_process(caller_node: Node, data: SceneManager_TransitionData) -> bo
 
 func _end_animation(caller_node: Variant, data: SceneManager_TransitionData) -> void:
 	if is_instance_valid(caller_node):
-		Utils.delete_node(caller_node.get_node(data.node_to_unload))
+		Utils.remove_node(caller_node.get_node(data.node_to_unload))
 	var load_into: Node
 	if data.load_into_path.is_absolute():
 		load_into = get_node(data.load_into_path)
@@ -253,7 +253,7 @@ func _fade(node: Node, start_color:= Color.WHITE, end_color := Color.BLACK, twee
 			await tween.finished
 
 	for to_remove in _temp_screens:
-		Utils.delete_node(to_remove)
+		Utils.remove_node(to_remove)
 
 func _get_all_canvaslayers(parent: Node) -> Array[Node]:
 	var output: Array[Node] = []

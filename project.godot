@@ -23,6 +23,11 @@ config/icon="res://icon.svg"
 
 SceneManager="*res://src/_reusable_stuff/features/scene_manager/scene_manager.tscn"
 SaveSystem="*res://src/_reusable_stuff/features/save_system/save_system.tscn"
+ItemSystem="*res://src/_reusable_stuff/features/item_system/item_system.tscn"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=1
 
 [display]
 
@@ -32,6 +37,14 @@ window/handheld/orientation=6
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/resource_path/plugin.cfg")
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/locale_filter_mode=0
 
 [rendering]
 

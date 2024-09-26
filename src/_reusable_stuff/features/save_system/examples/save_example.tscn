@@ -69,6 +69,7 @@ offset_top = 74.0
 offset_right = -38.0
 offset_bottom = 114.0
 script = ExtResource("10_wx218")
+values = null
 
 [node name="Label" type="Label" parent="resource_save/GridContainer"]
 layout_mode = 2

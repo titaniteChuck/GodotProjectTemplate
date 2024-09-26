@@ -16,7 +16,7 @@ func _read_model():
 		_update_ui()
 
 func _update_ui():
-	if not is_node_ready(): await ready
+	if not is_inside_tree(): await draw
 	text = str(counter.value)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

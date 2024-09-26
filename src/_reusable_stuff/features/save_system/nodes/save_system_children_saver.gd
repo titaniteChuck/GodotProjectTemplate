@@ -11,6 +11,6 @@ func _on_save_requested():
 func _on_load_request():
 	if is_inside_tree():
 		var from_save = SaveSystem.load_entity(get_path().get_concatenated_names()+":elements")
-		Utils.delete_children(self)
+		Utils.remove_children(self)
 		for el in from_save:
 			add_child(el)
