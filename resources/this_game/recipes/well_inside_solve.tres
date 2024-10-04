@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="ItemSystem_Recipe" load_steps=9 format=3 uid="uid://q278hevvsbpv"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="1_obfpr"]
+[ext_resource type="Resource" uid="uid://b4udk2m85uays" path="res://resources/this_game/items/grappling_hook.tres" id="2_lc7p1"]
+[ext_resource type="Resource" uid="uid://dcwc4rsfbtmif" path="res://resources/this_game/items/well_inside.tres" id="3_8w4c8"]
+[ext_resource type="Resource" uid="uid://c4s2fctxflseh" path="res://resources/this_game/items/well_outside.tres" id="4_est2y"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="5_bj4qq"]
+
+[sub_resource type="Resource" id="Resource_rywm7"]
+script = ExtResource("1_obfpr")
+item = ExtResource("3_8w4c8")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_jgoex"]
+script = ExtResource("1_obfpr")
+item = ExtResource("2_lc7p1")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_ce6v0"]
+script = ExtResource("1_obfpr")
+item = ExtResource("4_est2y")
+quantity = 1
+
+[resource]
+script = ExtResource("5_bj4qq")
+id = "well_inside_solve"
+ingredients = Array[ExtResource("1_obfpr")]([SubResource("Resource_rywm7"), SubResource("Resource_jgoex")])
+results = Array[ExtResource("1_obfpr")]([SubResource("Resource_ce6v0")])
+consume_ingredients = true

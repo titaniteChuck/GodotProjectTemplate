@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemSystem_Recipe" load_steps=7 format=3 uid="uid://dc3y1wer2l066"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="1_fs2ma"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="2_nk135"]
+[ext_resource type="Resource" uid="uid://bd2vheiko4uqy" path="res://resources/this_game/items/root.tres" id="2_whgyi"]
+[ext_resource type="Resource" uid="uid://cok6wuw4dijc8" path="res://resources/this_game/items/rope.tres" id="3_fqac1"]
+
+[sub_resource type="Resource" id="Resource_dodu5"]
+script = ExtResource("1_fs2ma")
+item = ExtResource("2_whgyi")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_dlf10"]
+script = ExtResource("1_fs2ma")
+item = ExtResource("3_fqac1")
+quantity = 1
+
+[resource]
+resource_name = "rope_create"
+script = ExtResource("2_nk135")
+id = "rope_create"
+ingredients = Array[ExtResource("1_fs2ma")]([SubResource("Resource_dodu5")])
+results = Array[ExtResource("1_fs2ma")]([SubResource("Resource_dlf10")])
+consume_ingredients = true

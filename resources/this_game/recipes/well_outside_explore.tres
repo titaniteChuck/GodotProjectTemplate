@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemSystem_Recipe" load_steps=7 format=3 uid="uid://csdj3g1kqiwdm"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="1_fo56s"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="2_c41v1"]
+[ext_resource type="Resource" uid="uid://c4s2fctxflseh" path="res://resources/this_game/items/well_outside.tres" id="2_v3ycn"]
+[ext_resource type="Resource" uid="uid://dcwc4rsfbtmif" path="res://resources/this_game/items/well_inside.tres" id="3_5bb8g"]
+
+[sub_resource type="Resource" id="Resource_dw4jv"]
+script = ExtResource("1_fo56s")
+item = ExtResource("2_v3ycn")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_hgvah"]
+script = ExtResource("1_fo56s")
+item = ExtResource("3_5bb8g")
+quantity = 1
+
+[resource]
+script = ExtResource("2_c41v1")
+id = "well_outside_explore"
+ingredients = Array[ExtResource("1_fo56s")]([SubResource("Resource_dw4jv")])
+results = Array[ExtResource("1_fo56s")]([SubResource("Resource_hgvah")])
+consume_ingredients = true

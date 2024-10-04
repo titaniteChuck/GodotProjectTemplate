@@ -1,0 +1,177 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs7s03wrlw12a"]
+
+[ext_resource type="Script" path="res://src/this_game/_game_scenes/level_selection/level_selection.gd" id="1_0bhnj"]
+[ext_resource type="Script" path="res://addons/scene_manager/transition_button/scene_manager_transition_button.gd" id="2_4ncgo"]
+[ext_resource type="Script" path="res://addons/scene_manager/transition_manager/scene_manager_transition_data.gd" id="3_sok2e"]
+
+[sub_resource type="Resource" id="Resource_dk153"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/level_selection/level_selection.tscn::Resource_dk153"
+resource_scene_unique_id = "Resource_dk153"
+script = ExtResource("3_sok2e")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "uid://c403gw0gehyv3"
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_0wpsn"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/level_selection/level_selection.tscn::Resource_0wpsn"
+resource_scene_unique_id = "Resource_0wpsn"
+script = ExtResource("3_sok2e")
+type = 1
+node_to_unload = NodePath(".")
+"What to load" = null
+scene_path_to_load = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_dk153")
+
+[sub_resource type="Resource" id="Resource_c5i4f"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/level_selection/level_selection.tscn::Resource_c5i4f"
+resource_scene_unique_id = "Resource_c5i4f"
+script = ExtResource("3_sok2e")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "uid://dgu5k80hgu14d"
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_5gbci"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/level_selection/level_selection.tscn::Resource_5gbci"
+resource_scene_unique_id = "Resource_5gbci"
+script = ExtResource("3_sok2e")
+type = 1
+node_to_unload = NodePath("..")
+"What to load" = null
+scene_path_to_load = ""
+"Where to load" = null
+load_into_path = NodePath("../Button/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_c5i4f")
+
+[node name="LevelSelection" type="Control" node_paths=PackedStringArray("levels_parent")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bhnj")
+levels_parent = NodePath("GridContainer")
+transition_data = SubResource("Resource_0wpsn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.370364, 0.370364, 0.370364, 1)
+
+[node name="BackToMenu_Button" type="Button" parent="."]
+offset_right = 198.0
+offset_bottom = 52.0
+text = "Back to main menu"
+script = ExtResource("2_4ncgo")
+transition = SubResource("Resource_5gbci")
+
+[node name="GridContainer" type="FlowContainer" parent="."]
+offset_left = 172.0
+offset_top = 225.0
+offset_right = 1000.0
+offset_bottom = 429.0
+alignment = 1
+
+[node name="Button" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="Button10" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"

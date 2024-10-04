@@ -13,9 +13,9 @@ GODOT_ADDONS_FOLDER=$(realpath --relative-to=$PWD ${PROJECT_ROOT}/addons)
 GITIGNORE=$(realpath --relative-to=$PWD ${PROJECT_ROOT}/.gitignore)
 
 ADDONS_LIST=(
+    git@github.com:titaniteChuck/Godot-Commons-Addons.git
     git@github.com:huwpascoe/godot_resource_path.git # used to store resources UIDs, that follow file move
-    git@github.com:EiTaNBaRiBoA/JsonClassConverter.git # used by the save_maager to convert to/from json
-    # git@github.com:jhlothamer/godot_game_state_saver_plugin.git
+    # git@github.com:EiTaNBaRiBoA/JsonClassConverter.git # used by the save_maager to convert to/from json
 )
 
 main() {
@@ -132,7 +132,7 @@ _delete_symlink() {
     addon_folder_name=$(basename ${addon_folder_in_submodule_dir})
     addon_folder_in_godot_addons_dir=${GODOT_ADDONS_FOLDER}/${addon_folder_name}
     echo "Deleting symlink [${addon_folder_in_godot_addons_dir}]"
-    rm -f ${addon_folder_in_godot_addons_dir}
+    rm -rf ${addon_folder_in_godot_addons_dir}
 }
 
 #######################################

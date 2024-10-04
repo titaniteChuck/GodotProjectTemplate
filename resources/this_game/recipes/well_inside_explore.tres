@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="ItemSystem_Recipe" load_steps=9 format=3 uid="uid://caniylew3myhp"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="1_y5poo"]
+[ext_resource type="Resource" uid="uid://dcwc4rsfbtmif" path="res://resources/this_game/items/well_inside.tres" id="2_aw88w"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="2_osoma"]
+[ext_resource type="Resource" uid="uid://bbmcvb6xamq0u" path="res://resources/this_game/items/rock.tres" id="3_y3x5a"]
+[ext_resource type="Resource" uid="uid://bd2vheiko4uqy" path="res://resources/this_game/items/root.tres" id="4_6pxtq"]
+
+[sub_resource type="Resource" id="Resource_g8jqt"]
+script = ExtResource("1_y5poo")
+item = ExtResource("2_aw88w")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_6a3xf"]
+script = ExtResource("1_y5poo")
+item = ExtResource("3_y3x5a")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_u5in6"]
+script = ExtResource("1_y5poo")
+item = ExtResource("4_6pxtq")
+quantity = 2
+
+[resource]
+script = ExtResource("2_osoma")
+id = "well_inside_explore"
+ingredients = Array[ExtResource("1_y5poo")]([SubResource("Resource_g8jqt")])
+results = Array[ExtResource("1_y5poo")]([SubResource("Resource_6a3xf"), SubResource("Resource_u5in6")])
+consume_ingredients = false

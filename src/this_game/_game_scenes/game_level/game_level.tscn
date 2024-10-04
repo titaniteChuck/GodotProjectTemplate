@@ -1,0 +1,283 @@
+[gd_scene load_steps=25 format=3 uid="uid://c403gw0gehyv3"]
+
+[ext_resource type="Script" path="res://src/this_game/_game_scenes/game_level/game_level.gd" id="1_xhnb1"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="2_w07xf"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_inventory.gd" id="3_bgr6o"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="4_lqkn0"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="4_twrvs"]
+[ext_resource type="Texture2D" uid="uid://dkthtyc8e1sj2" path="res://resources/this_game/items/well_outside.bmp" id="5_3xfl6"]
+[ext_resource type="Script" path="res://src/this_game/model/game_level/model/game_level_data.gd" id="5_debjn"]
+[ext_resource type="Script" path="res://addons/item_system/nodes/item_system_crafting_machine.gd" id="6_rcjbb"]
+[ext_resource type="Script" path="res://addons/scene_manager/transition_manager/scene_manager_transition_data.gd" id="6_vgup3"]
+[ext_resource type="Script" path="res://addons/item_system/nodes/item_system_ui_inventory_slots.gd" id="7_lgm11"]
+[ext_resource type="Script" path="res://addons/item_system/nodes/item_system_ui_item_slot.gd" id="8_enu7d"]
+[ext_resource type="Texture2D" uid="uid://cg1rescdx7lnb" path="res://resources/_reusable_stuff/icons/arrow_right.png" id="9_unke1"]
+[ext_resource type="Script" path="res://addons/drag_and_drop/nodes/dragandrop_draggable.gd" id="9_uux4i"]
+[ext_resource type="PackedScene" uid="uid://bcrcs6wvwk3qg" path="res://addons/item_system/nodes/item_system_ui_item_slot.tscn" id="10_f4ng0"]
+
+[sub_resource type="Resource" id="Resource_adaxi"]
+script = ExtResource("3_bgr6o")
+item_stacks = Array[ExtResource("2_w07xf")]([])
+
+[sub_resource type="Resource" id="Resource_p2nmu"]
+script = ExtResource("3_bgr6o")
+item_stacks = Array[ExtResource("2_w07xf")]([])
+
+[sub_resource type="Resource" id="Resource_l2uho"]
+script = ExtResource("4_lqkn0")
+id = "well_outside"
+name = {
+"en": "well",
+"fr": "puit"
+}
+texture2D = ExtResource("5_3xfl6")
+
+[sub_resource type="Resource" id="Resource_ri60o"]
+script = ExtResource("2_w07xf")
+item = SubResource("Resource_l2uho")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_ur0ga"]
+script = ExtResource("3_bgr6o")
+item_stacks = Array[ExtResource("2_w07xf")]([SubResource("Resource_ri60o")])
+
+[sub_resource type="Resource" id="Resource_pfddv"]
+script = ExtResource("5_debjn")
+id = ""
+inventory = SubResource("Resource_p2nmu")
+result_inventory = SubResource("Resource_ur0ga")
+ingredients_inventory = SubResource("Resource_adaxi")
+solved = false
+unlocked = false
+level_recipes = Array[ExtResource("4_twrvs")]([])
+
+[sub_resource type="Resource" id="Resource_0i7mx"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/game_level/game_level.tscn::Resource_0i7mx"
+resource_scene_unique_id = "Resource_0i7mx"
+script = ExtResource("6_vgup3")
+type = 0
+"What to unload" = null
+node_to_unload = NodePath("")
+scene_path_to_load = "uid://cs7s03wrlw12a"
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+
+[sub_resource type="Resource" id="Resource_qp23u"]
+Resource = null
+resource_path = "res://src/this_game/_game_scenes/game_level/game_level.tscn::Resource_qp23u"
+resource_scene_unique_id = "Resource_qp23u"
+script = ExtResource("6_vgup3")
+type = 1
+node_to_unload = NodePath(".")
+"What to load" = null
+scene_path_to_load = ""
+"Where to load" = null
+load_into_path = NodePath("/root")
+load_into_position = -1
+transition = 2
+transiton_duration = 0.3
+transition_tween_type = 1
+fade_color = Color(0, 0, 0, 1)
+slide_direction = Vector2i(0, 0)
+anim_player_transition_name = ""
+next_transition = SubResource("Resource_0i7mx")
+
+[sub_resource type="Resource" id="Resource_xqeoh"]
+script = ExtResource("3_bgr6o")
+item_stacks = Array[ExtResource("2_w07xf")]([])
+
+[sub_resource type="PackedScene" id="PackedScene_pen3b"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("ItemSystem_UI_ItemSlot", "custom_minimum_size", "script", "PanelContainer", "DragAndDrop_Draggable", "layout_mode", "Control"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 6, 4, -1, 2, 5, 2, 2, 3, 0),
+"variants": [Vector2(90, 120), ExtResource("8_enu7d"), 2, ExtResource("9_uux4i")],
+"version": 3
+}
+
+[node name="Game_Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhnb1")
+level_data = SubResource("Resource_pfddv")
+back_to_level_selection_transition_data = SubResource("Resource_qp23u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.306923, 0.306923, 0.306923, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="BackToLevelSelection_Button" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Back to level selection "
+
+[node name="OnVictory_HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/OnVictory_HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Problem Solved !"
+
+[node name="Spacer2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Crafting_Machine" type="BoxContainer" parent="VBoxContainer" node_paths=PackedStringArray("ingredients_slots", "results_slots", "trigger_button")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 34
+alignment = 1
+script = ExtResource("6_rcjbb")
+ingredients_slots = NodePath("Ingredients")
+results_slots = NodePath("Results")
+trigger_button = NodePath("BoxContainer/Button")
+
+[node name="Ingredients" type="GridContainer" parent="VBoxContainer/Crafting_Machine"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 2
+script = ExtResource("7_lgm11")
+inventory = SubResource("Resource_xqeoh")
+
+[node name="ItemSystem_UI_ItemSlot" parent="VBoxContainer/Crafting_Machine/Ingredients" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot2" parent="VBoxContainer/Crafting_Machine/Ingredients" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot3" parent="VBoxContainer/Crafting_Machine/Ingredients" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot4" parent="VBoxContainer/Crafting_Machine/Ingredients" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="VBoxContainer/Crafting_Machine"]
+layout_mode = 2
+alignment = 1
+vertical = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Crafting_Machine/BoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_unke1")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/Crafting_Machine/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Craft !"
+
+[node name="Results" type="BoxContainer" parent="VBoxContainer/Crafting_Machine"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 19
+alignment = 1
+script = ExtResource("7_lgm11")
+inventory = SubResource("Resource_xqeoh")
+generate_slots = true
+slot_factory = SubResource("PackedScene_pen3b")
+
+[node name="ItemSystem_UI_ItemSlot5" parent="VBoxContainer/Crafting_Machine/Results" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+is_droppable = false
+
+[node name="ItemSystem_UI_ItemSlot6" parent="VBoxContainer/Crafting_Machine/Results" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+is_droppable = false
+
+[node name="ItemSystem_UI_ItemSlot7" parent="VBoxContainer/Crafting_Machine/Results" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+is_droppable = false
+
+[node name="ItemSystem_UI_ItemSlot8" parent="VBoxContainer/Crafting_Machine/Results" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+is_droppable = false
+
+[node name="Spacer3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Inventory" type="BoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+script = ExtResource("7_lgm11")
+inventory = SubResource("Resource_xqeoh")
+
+[node name="ItemSystem_UI_ItemSlot" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot2" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot3" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot4" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot5" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot6" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot7" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+
+[node name="ItemSystem_UI_ItemSlot8" parent="VBoxContainer/Inventory" instance=ExtResource("10_f4ng0")]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2

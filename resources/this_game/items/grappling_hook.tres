@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemSystem_Item" load_steps=3 format=3 uid="uid://b4udk2m85uays"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="1_1k7hi"]
+[ext_resource type="Texture2D" uid="uid://cxixnca4bi0wo" path="res://resources/this_game/items/grappling_hook.png" id="2_b8bg6"]
+
+[resource]
+script = ExtResource("1_1k7hi")
+id = "grappling_hook"
+name = {}
+texture2D = ExtResource("2_b8bg6")

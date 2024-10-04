@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemSystem_Item" load_steps=3 format=3 uid="uid://bd2vheiko4uqy"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="1_dxbkw"]
+[ext_resource type="Texture2D" uid="uid://cl742gfd3heqv" path="res://resources/this_game/items/root.png" id="2_nikpc"]
+
+[resource]
+script = ExtResource("1_dxbkw")
+id = "root"
+name = {}
+texture2D = ExtResource("2_nikpc")

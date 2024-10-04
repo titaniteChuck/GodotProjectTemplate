@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemSystem_Item" load_steps=3 format=3 uid="uid://dcwc4rsfbtmif"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="1_687po"]
+[ext_resource type="Texture2D" uid="uid://clq347r5f2peo" path="res://resources/this_game/items/well_inside.bmp" id="2_8xctc"]
+
+[resource]
+script = ExtResource("1_687po")
+id = "well_inside"
+name = {}
+texture2D = ExtResource("2_8xctc")

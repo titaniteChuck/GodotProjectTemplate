@@ -1,0 +1,10 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgmxo8p6hx0by"]
+
+[ext_resource type="Script" path="res://src/this_game/model/game_level/services/game_level_service.gd" id="1_s7u8m"]
+[ext_resource type="Script" path="res://src/this_game/model/game_level/model/game_level_data.gd" id="2_wlx1c"]
+[ext_resource type="Resource" uid="uid://bvypsmpsn2i8y" path="res://resources/this_game/levels/fall_in_well.tres" id="3_1c6ll"]
+[ext_resource type="Resource" uid="uid://ds0aekmtkh0r2" path="res://resources/this_game/levels/fall_in_well_2.tres" id="4_aicly"]
+
+[node name="GameLevelService" type="Node"]
+script = ExtResource("1_s7u8m")
+levels = Array[ExtResource("2_wlx1c")]([ExtResource("3_1c6ll"), ExtResource("4_aicly")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="GameLevelData" load_steps=15 format=3 uid="uid://ds0aekmtkh0r2"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="1_tedls"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_inventory.gd" id="2_1ce83"]
+[ext_resource type="Resource" uid="uid://csdj3g1kqiwdm" path="res://resources/this_game/recipes/well_outside_explore.tres" id="3_gjhh5"]
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="3_o8ucp"]
+[ext_resource type="Resource" uid="uid://c4s2fctxflseh" path="res://resources/this_game/items/well_outside.tres" id="4_1gcdx"]
+[ext_resource type="Resource" uid="uid://cnewa0ypnaqep" path="res://resources/this_game/recipes/grappling_create.tres" id="4_a5x48"]
+[ext_resource type="Script" path="res://src/this_game/model/game_level/model/game_level_data.gd" id="5_44jrk"]
+[ext_resource type="Resource" uid="uid://dc3y1wer2l066" path="res://resources/this_game/recipes/rope_create.tres" id="5_srki6"]
+[ext_resource type="Resource" uid="uid://caniylew3myhp" path="res://resources/this_game/recipes/well_inside_explore.tres" id="6_8k2n3"]
+[ext_resource type="Resource" uid="uid://q278hevvsbpv" path="res://resources/this_game/recipes/well_inside_solve.tres" id="7_2lfse"]
+
+[sub_resource type="Resource" id="Resource_2ayk0"]
+script = ExtResource("2_1ce83")
+item_stacks = Array[ExtResource("1_tedls")]([])
+
+[sub_resource type="Resource" id="Resource_k657c"]
+script = ExtResource("2_1ce83")
+item_stacks = Array[ExtResource("1_tedls")]([])
+
+[sub_resource type="Resource" id="Resource_q356o"]
+script = ExtResource("1_tedls")
+item = ExtResource("4_1gcdx")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_juo00"]
+script = ExtResource("2_1ce83")
+item_stacks = Array[ExtResource("1_tedls")]([SubResource("Resource_q356o")])
+
+[resource]
+script = ExtResource("5_44jrk")
+id = "fall_in_well_2"
+inventory = SubResource("Resource_k657c")
+result_inventory = SubResource("Resource_juo00")
+ingredients_inventory = SubResource("Resource_2ayk0")
+solved = false
+unlocked = false
+recipe_to_win = ExtResource("7_2lfse")
+level_recipes = Array[ExtResource("3_o8ucp")]([ExtResource("4_a5x48"), ExtResource("5_srki6"), ExtResource("6_8k2n3"), ExtResource("7_2lfse"), ExtResource("3_gjhh5")])

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemSystem_Item" load_steps=3 format=3 uid="uid://bbmcvb6xamq0u"]
+
+[ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="1_2u3ui"]
+[ext_resource type="Texture2D" uid="uid://c4xlep7jfk7q3" path="res://resources/this_game/items/rock.png" id="2_a66g0"]
+
+[resource]
+script = ExtResource("1_2u3ui")
+id = "rock"
+name = {}
+texture2D = ExtResource("2_a66g0")
