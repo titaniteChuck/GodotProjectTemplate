@@ -23,7 +23,6 @@ quantity = 1
 
 [resource]
 script = ExtResource("5_bj4qq")
-id = "well_inside_solve"
 ingredients = Array[ExtResource("1_obfpr")]([SubResource("Resource_rywm7"), SubResource("Resource_jgoex")])
 results = Array[ExtResource("1_obfpr")]([SubResource("Resource_ce6v0")])
 consume_ingredients = true

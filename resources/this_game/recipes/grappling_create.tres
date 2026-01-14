@@ -23,7 +23,6 @@ quantity = 1
 
 [resource]
 script = ExtResource("2_o4hqe")
-id = "grappling_create"
 ingredients = Array[ExtResource("1_a0cyv")]([SubResource("Resource_0xh3u"), SubResource("Resource_lums6")])
 results = Array[ExtResource("1_a0cyv")]([SubResource("Resource_xisvp")])
 consume_ingredients = true

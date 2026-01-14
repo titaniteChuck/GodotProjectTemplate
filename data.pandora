@@ -1,0 +1,158 @@
+{
+	"_entity_data": {
+		"_categories": [
+			{
+				"_category_id": "",
+				"_icon_color": "ffffff00",
+				"_id": "1",
+				"_index": 0,
+				"_name": "Item",
+				"_script_path": "res://addons/item_system/model/item_system_item.gd"
+			},
+			{
+				"_category_id": "",
+				"_icon_color": "ffffff00",
+				"_id": "3",
+				"_index": 0,
+				"_name": "Recipes"
+			},
+			{
+				"_category_id": "",
+				"_icon_color": "ffffff00",
+				"_id": "8",
+				"_index": 0,
+				"_name": "ItemStack"
+			},
+			{
+				"_category_id": "3",
+				"_icon_color": "ffffff00",
+				"_id": "17",
+				"_index": 0,
+				"_name": "level 1"
+			}
+		],
+		"_entities": [
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "4",
+				"_index": 0,
+				"_name": "Well_Outside",
+				"_property_overrides": {
+					"id": {
+						"type": "string",
+						"value": "well_outside"
+					},
+					"texture2D": {
+						"type": "resource",
+						"value": "res://resources/this_game/items/well_outside.bmp"
+					}
+				}
+			},
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "15",
+				"_index": 0,
+				"_name": "Well_Inside",
+				"_property_overrides": {
+					"id": {
+						"type": "string",
+						"value": "well_inside"
+					},
+					"texture2D": {
+						"type": "resource",
+						"value": "res://resources/this_game/items/well_inside.bmp"
+					}
+				}
+			},
+			{
+				"_category_id": "17",
+				"_icon_color": "ffffff00",
+				"_id": "18",
+				"_index": 0,
+				"_name": "fall_in_well",
+				"_property_overrides": {
+					"ingredients": {
+						"type": "array",
+						"value": {
+							"0": {
+								"type": "reference",
+								"value": {
+									"_entity_id": "4",
+									"_type": 0
+								}
+							}
+						}
+					},
+					"results": {
+						"type": "array",
+						"value": {
+							"0": {
+								"type": "reference",
+								"value": {
+									"_entity_id": "15",
+									"_type": 0
+								}
+							}
+						}
+					}
+				}
+			}
+		],
+		"_properties": [
+			{
+				"_category_id": "8",
+				"_default_value": {
+					"_entity_id": "10",
+					"_type": 0
+				},
+				"_id": "9",
+				"_name": "item",
+				"_setting_overrides": {
+					"Categories Only": true,
+					"Category Filter": "1"
+				},
+				"_type": "reference"
+			},
+			{
+				"_category_id": "3",
+				"_default_value": {
+
+				},
+				"_id": "19",
+				"_name": "ingredients",
+				"_setting_overrides": {
+					"Array Type": "reference",
+					"Category Filter": "1"
+				},
+				"_type": "array"
+			},
+			{
+				"_category_id": "3",
+				"_default_value": {
+
+				},
+				"_id": "20",
+				"_name": "results",
+				"_setting_overrides": {
+					"Array Type": "reference",
+					"Category Filter": "1"
+				},
+				"_type": "array"
+			},
+			{
+				"_category_id": "3",
+				"_default_value": false,
+				"_id": "21",
+				"_name": "consumes_ingredients",
+				"_type": "bool"
+			}
+		]
+	},
+	"_id_generator": {
+		"_ids_by_context": {
+			"default": 22
+		}
+	}
+}

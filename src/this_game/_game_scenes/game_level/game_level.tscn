@@ -1,11 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://c403gw0gehyv3"]
+[gd_scene load_steps=24 format=3 uid="uid://c403gw0gehyv3"]
 
 [ext_resource type="Script" path="res://src/this_game/_game_scenes/game_level/game_level.gd" id="1_xhnb1"]
 [ext_resource type="Script" path="res://addons/item_system/model/item_system_item_stack.gd" id="2_w07xf"]
 [ext_resource type="Script" path="res://addons/item_system/model/item_system_inventory.gd" id="3_bgr6o"]
 [ext_resource type="Script" path="res://addons/item_system/model/item_system_item.gd" id="4_lqkn0"]
 [ext_resource type="Script" path="res://addons/item_system/model/item_system_recipe.gd" id="4_twrvs"]
-[ext_resource type="Texture2D" uid="uid://dkthtyc8e1sj2" path="res://resources/this_game/items/well_outside.bmp" id="5_3xfl6"]
 [ext_resource type="Script" path="res://src/this_game/model/game_level/model/game_level_data.gd" id="5_debjn"]
 [ext_resource type="Script" path="res://addons/item_system/nodes/item_system_crafting_machine.gd" id="6_rcjbb"]
 [ext_resource type="Script" path="res://addons/scene_manager/transition_manager/scene_manager_transition_data.gd" id="6_vgup3"]
@@ -25,12 +24,9 @@ item_stacks = Array[ExtResource("2_w07xf")]([])
 
 [sub_resource type="Resource" id="Resource_l2uho"]
 script = ExtResource("4_lqkn0")
-id = "well_outside"
-name = {
-"en": "well",
-"fr": "puit"
-}
-texture2D = ExtResource("5_3xfl6")
+id = ""
+name = ""
+_id = ""
 
 [sub_resource type="Resource" id="Resource_ri60o"]
 script = ExtResource("2_w07xf")
@@ -128,6 +124,7 @@ grow_vertical = 2
 color = Color(0.306923, 0.306923, 0.306923, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 648.0
 

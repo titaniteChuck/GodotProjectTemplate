@@ -1,6 +1,9 @@
 [submodule "addons_submodules/Godot-Commons-Addons"]
 	path = addons_submodules/Godot-Commons-Addons
 	url = git@github.com:titaniteChuck/Godot-Commons-Addons.git
+[submodule "addons_submodules/pandora"]
+	path = addons_submodules/pandora
+	url = git@github.com:bitbrain/pandora.git
 [submodule "addons_submodules/godot_resource_path"]
 	path = addons_submodules/godot_resource_path
 	url = git@github.com:huwpascoe/godot_resource_path.git

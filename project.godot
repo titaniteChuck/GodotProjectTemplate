@@ -25,6 +25,7 @@ SceneManager="*res://addons/scene_manager/autoload/scene_manager.tscn"
 SaveSystem="*res://addons/save_system/autoload/save_system.tscn"
 ItemSystem="*res://addons/item_system/autoload/item_system.tscn"
 GameLevelService="*res://src/this_game/model/game_level/services/game_level_service.tscn"
+Pandora="*res://addons/pandora/api.gd"
 
 [debug]
 
@@ -37,7 +38,7 @@ window/handheld/orientation=6
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg", "res://addons/item_system/plugin.cfg", "res://addons/resource_path/plugin.cfg", "res://addons/save_system/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg", "res://addons/item_system/plugin.cfg", "res://addons/pandora/plugin.cfg", "res://addons/resource_path/plugin.cfg", "res://addons/save_system/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
 
 [input_devices]
 

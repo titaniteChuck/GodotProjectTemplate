@@ -14,6 +14,7 @@ GITIGNORE=$(realpath --relative-to=$PWD ${PROJECT_ROOT}/.gitignore)
 
 ADDONS_LIST=(
     git@github.com:titaniteChuck/Godot-Commons-Addons.git
+    git@github.com:bitbrain/pandora.git
     git@github.com:huwpascoe/godot_resource_path.git # used to store resources UIDs, that follow file move
     # git@github.com:EiTaNBaRiBoA/JsonClassConverter.git # used by the save_maager to convert to/from json
 )

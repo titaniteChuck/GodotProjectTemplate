@@ -17,7 +17,6 @@ quantity = 1
 
 [resource]
 script = ExtResource("2_c41v1")
-id = "well_outside_explore"
 ingredients = Array[ExtResource("1_fo56s")]([SubResource("Resource_dw4jv")])
 results = Array[ExtResource("1_fo56s")]([SubResource("Resource_hgvah")])
 consume_ingredients = true

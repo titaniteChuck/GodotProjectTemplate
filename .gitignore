@@ -5,5 +5,7 @@ addons/drag_and_drop
 addons/item_system
 addons/save_system
 addons/scene_manager
-addons/resource_path
 *.tmp
+addons/gdUnit4
+addons/pandora
+addons/resource_path

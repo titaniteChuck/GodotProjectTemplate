@@ -23,7 +23,6 @@ quantity = 2
 
 [resource]
 script = ExtResource("2_osoma")
-id = "well_inside_explore"
 ingredients = Array[ExtResource("1_y5poo")]([SubResource("Resource_g8jqt")])
 results = Array[ExtResource("1_y5poo")]([SubResource("Resource_6a3xf"), SubResource("Resource_u5in6")])
 consume_ingredients = false

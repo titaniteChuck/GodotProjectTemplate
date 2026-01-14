@@ -103,6 +103,7 @@ grow_vertical = 2
 color = Color(0.370364, 0.370364, 0.370364, 1)
 
 [node name="BackToMenu_Button" type="Button" parent="."]
+layout_mode = 0
 offset_right = 198.0
 offset_bottom = 52.0
 text = "Back to main menu"
@@ -110,6 +111,7 @@ script = ExtResource("2_4ncgo")
 transition = SubResource("Resource_5gbci")
 
 [node name="GridContainer" type="FlowContainer" parent="."]
+layout_mode = 0
 offset_left = 172.0
 offset_top = 225.0
 offset_right = 1000.0

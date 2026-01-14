@@ -18,7 +18,6 @@ quantity = 1
 [resource]
 resource_name = "rope_create"
 script = ExtResource("2_nk135")
-id = "rope_create"
 ingredients = Array[ExtResource("1_fs2ma")]([SubResource("Resource_dodu5")])
 results = Array[ExtResource("1_fs2ma")]([SubResource("Resource_dlf10")])
 consume_ingredients = true
